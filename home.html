@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ali Resep</title>
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  background: #e9e6df;
+}
+
+/* NAVBAR */
+.navbar {
+  height: 100px;
+  background: #E98D2E;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 40px;
+}
+
+.left {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+
+.avatar {
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.fotomakan {
+    width: 375px;
+    height: 190px;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+.right {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+
+.logo-text {
+  color: white;
+  font-size: 35px;
+  font-family: cursive;
+  font-weight: bold;
+}
+
+.logo-img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+}
+
+.search {
+  width: 250px;
+  padding: 10px;
+  border-radius: 20px;
+  border: none;
+  outline: none;
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+}
+
+.signup {
+  background: #f5f5f5;
+  border: none;
+  padding: 8px 18px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: 0.2s;
+}
+
+.signup:hover {
+  background: #e0e0e0;
+}
+
+/* SIDEBAR */
+.sidebar {
+  position: fixed;
+  top: 100px;
+  left: 0;
+  width: 220px;
+  height: calc(100% - 70px);
+  background: #70A7BD;
+  padding: 25px;
+  border-radius: 0 10px 10px 0;
+}
+
+.sidebar a {
+  display: block;
+  margin: 15px 0;
+  text-decoration: none;
+  color: black;
+  font-size: 16px;
+}
+
+/* ACTIVE (yang diklik) */
+.sidebar a.active {
+  font-weight: bold;
+}
+
+/* HOVER */
+.sidebar a:hover {
+  opacity: 0.7;
+}
+
+/* CONTENT */
+.container {
+  margin-left: 240px;
+  padding: 30px;
+}
+
+/* GRID */
+.title {
+  background: #9aa4b3;
+  padding: 6px 20px;
+  border-radius: 20px;
+  margin-bottom: 10px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.card {
+  height: 190px;
+  background: #dcdcdc;
+  border-radius: 15px;
+  position: relative;
+  box-shadow: 0 3px 5px rgba(0,0,0,0.1);
+}
+
+/* LABEL */
+.label {
+  position: absolute;
+  bottom: 10px;
+  left: 20px;
+  background: #DAC972;
+  padding: 6px 12px;
+  border-radius: 12px;
+  font-size: 15px;
+}
+
+/* FOOTER */
+.footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background: #df862f;
+  color: white;
+  text-align: right;
+  padding: 10px;
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<div class="navbar">
+  <div class="left">
+  <img src="file:///Users/aliciakirty/Downloads/ChatGPT%20Image%20Feb%2020,%202026,%2008_57_57%20AM.png" class="logo-img">
+  <div class="logo-text">Ali Resep</div>
+  </div>
+  <div class="right">
+  <input class="search" placeholder="search">
+  <div class="nav-right">
+  <button class="signup">Ms.Alicia Kirty</button>
+  </div>
+  <img src="file:///Users/aliciakirty/Downloads/1600w-9Vrb-3w_jP8.webp" class="avatar">
+  </div>
+</div>
+
+
+<!-- SIDEBAR -->
+<div class="sidebar">
+  <a href="home.html" class="active">Home</a>
+  <a href="baking.html">Baking</a>
+  <a href="cooking.html">Cooking</a>
+  <a href="saved.html">Saved</a>
+  <a href="settings.html">Settings</a>
+</div>
+
+<!-- CONTENT -->
+<div class="container">
+  <div class="title"><b>Home</b></div>
+
+  <div class="grid">
+    <div class="card">
+      <img src="https://i0.wp.com/erinscozykitchen.com/wp-content/uploads/2025/09/IMG_8489.jpg?fit=750%2C985&ssl=1" class="fotomakan">
+      <a href="saltbread.html" style="color:black"><div class="label">Saltbread</div></a>
+    </div>
+
+    <div class="card">
+      <img src="https://onehappybite.com/wp-content/uploads/2024/07/LKK-02-683x1024.jpg" class="fotomakan">
+      <div class="label">Sushi Baked</div>
+    </div>
+
+    <div class="card">
+      <img src="https://www.spendwithpennies.com/wp-content/uploads/2019/03/SWP-Garlic-Parmesan-Wings-SpendWithPennies-7.jpg" class="fotomakan">
+      <div class="label">Garlic Parmesan Wings</div>
+    </div>
+
+    <div class="card">
+      <img src="https://www.allrecipes.com/thmb/p4f6RaeEnKTJyE4PVm9dzyMKUMc=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/GettyImages-636266048-2000-4fe716c6d4584ec4b6ccab88125d4cef.jpg" class="fotomakan">
+      <div class="label">Macaroon</div>
+    </div>
+
+    <div class="card">
+      <img src="https://www.twopeasandtheirpod.com/wp-content/uploads/2023/08/Brown-Butter-Chocolate-Chip-Cookie-Bars-14.jpg" class="fotomakan">
+      <div class="label">Cookie Bars</div>
+    </div>
+
+    <div class="card">
+      <img src="https://hairsoutofplace.com/wp-content/uploads/2026/03/IMG_1047-edited-scaled.jpg" class="fotomakan">
+      <div class="label">Strawberry Matcha Clusters</div>
+    </div>
+
+    <div class="card">
+      <img src="https://cookinginthemidwest.com/wp-content/uploads/2024/08/savingPNG-2-2.jpg" class="fotomakan">
+      <div class="label">Crunchwrap Supreme</div>
+    </div>
+
+    <div class="card">
+      <img src="https://thecozyapron.com/wp-content/uploads/2023/04/cheesy-garlic-bread_thecozyapron_1.jpg" class="fotomakan">
+      <div class="label">Cheesy Garlic Bread</div>
+    </div>
+
+    <div class="card">
+      <img src="https://www.jocooks.com/wp-content/uploads/2019/03/pasta-all-vodka-1-16.jpg" class="fotomakan">
+      <div class="label">Creamy Vodka Pasta</div>
+    </div>
+    
+  </div>
+</div>
+
+<!-- FOOTER -->
+<div class="footer">
+  © 2026 Alicia Company. All Rights Reserved. | Privacy Policy | Terms of Service | Disclaimer
+</div>
+
+<script>
+function closeModal(){
+  document.querySelector('.modal').style.display = 'none';
+}
+</script>
+
+</body>
+</html>

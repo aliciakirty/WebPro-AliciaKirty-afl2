@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ali Resep</title>
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  background: #e9e6df;
+}
+
+/* NAVBAR */
+.navbar {
+  height: 100px;
+  background: #E98D2E;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 40px;
+}
+
+.left {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+
+.avatar {
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.fotomakan {
+    width: 1170px;
+    height: 190px;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+.right {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+
+.logo-text {
+  color: white;
+  font-size: 35px;
+  font-family: cursive;
+  font-weight: bold;
+}
+
+.logo-img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+}
+
+.search {
+  width: 250px;
+  padding: 10px;
+  border-radius: 20px;
+  border: none;
+  outline: none;
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+}
+
+.signup {
+  background: #f5f5f5;
+  border: none;
+  padding: 8px 18px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: 0.2s;
+}
+
+.signup:hover {
+  background: #e0e0e0;
+}
+
+/* SIDEBAR */
+.sidebar {
+  position: fixed;
+  top: 100px;
+  left: 0;
+  width: 220px;
+  height: calc(100% - 70px);
+  background: #70A7BD;
+  padding: 25px;
+  border-radius: 0 10px 10px 0;
+}
+
+.sidebar a {
+  display: block;
+  margin: 15px 0;
+  text-decoration: none;
+  color: black;
+  font-size: 16px;
+}
+
+/* ACTIVE (yang diklik) */
+.sidebar a.active {
+  font-weight: bold;
+}
+
+/* HOVER */
+.sidebar a:hover {
+  opacity: 0.7;
+}
+
+/* CONTENT */
+.container {
+  margin-left: 240px;
+  padding: 30px;
+}
+
+/* GRID */
+.title {
+  background: #9aa4b3;
+  padding: 6px 20px;
+  border-radius: 20px;
+  margin-bottom: 10px;
+}
+
+.grid {
+  display: grid;
+  gap: 20px;
+}
+
+.card {
+  height: 190px;
+  background: #dcdcdc;
+  border-radius: 15px;
+  position: relative;
+  box-shadow: 0 3px 5px rgba(0,0,0,0.1);
+}
+
+/* CARD RESEP */
+.recipe-img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 15px 15px 0px 0px;
+}
+
+.recipe-card {
+  width: 100%;
+  max-width: 1100px;
+  margin: auto;
+  border-radius: 15px;
+  overflow: hidden;
+  position: relative;
+}
+
+/* TITLE */
+.recipe-title {
+  position: absolute;
+  top: 170px;
+  left: 20px;
+  font-size: 28px;
+  font-family: cursive;
+  font-weight: bold;
+}
+
+/* CLOSE BUTTON */
+.close-btn {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: #ddd;
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+  border: none;
+  cursor: pointer;
+}
+
+/* PANEL BAWAH */
+.recipe-content {
+  background: #DAC972;
+  padding: 25px 30px;
+  border-radius: 0px 0px 15px 15px;
+  margin-top: -5px;
+}
+
+/* TAB */
+.tabs {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+.tab {
+  padding: 8px 20px;
+  border-radius: 20px;
+  border: none;
+  cursor: pointer;
+}
+
+.tab.active {
+  background: #9aa4b3;
+}
+
+.tab:not(.active) {
+  background: #cfcfcf;
+}
+
+/* LIST */
+.recipe-content ul {
+  padding-left: 20px;
+  line-height: 1.6;
+}
+
+/* LABEL */
+.label {
+  background: #DAC972;
+  padding: 6px 12px;
+  border-radius: 12px;
+  font-size: 15px;
+}
+
+/* FOOTER */
+.footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background: #df862f;
+  color: white;
+  text-align: right;
+  padding: 10px;
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<div class="navbar">
+  <div class="left">
+  <img src="file:///Users/aliciakirty/Downloads/ChatGPT%20Image%20Feb%2020,%202026,%2008_57_57%20AM.png" class="logo-img">
+  <div class="logo-text">Ali Resep</div>
+  </div>
+  <div class="right">
+  <input class="search" placeholder="search">
+  <div class="nav-right">
+  <button class="signup">Ms.Alicia Kirty</button>
+  </div>
+  <img src="file:///Users/aliciakirty/Downloads/1600w-9Vrb-3w_jP8.webp" class="avatar">
+  </div>
+</div>
+
+
+<!-- SIDEBAR -->
+<div class="sidebar">
+  <a href="home.html" class="active">Home</a>
+  <a href="baking.html">Baking</a>
+  <a href="cooking.html">Cooking</a>
+  <a href="saved.html">Saved</a>
+  <a href="settings.html">Settings</a>
+</div>
+
+<!-- CONTENT -->
+<div class="container">
+    <div class="card">
+      <img src="https://i0.wp.com/erinscozykitchen.com/wp-content/uploads/2025/09/IMG_8489.jpg?fit=750%2C985&ssl=1" class="recipe-img">
+      <div class="recipe-title">Saltbread</div>
+      <form action="home.html"><button class="close-btn">✕</button></form>
+
+    <div class="recipe-content">
+      
+      <div class="tabs">
+        <a href="saltbread.html"><button class="tab">Ingredients</button></a>
+        <button class="tab active">Instructions</button>
+      </div>
+
+      <ul>
+        <b>How to make the dough</b>
+        <li>In the bowl of a stand mixer, add bread flour, cake flour, sugar, salt, milk powder, yeast, and cold water.</li>
+        <li>Mix with a dough hook on low speed until a shaggy, cohesive dough forms.</li>
+        <li>Add the unsalted butter (fridge-cold, not softened) and increase to medium speed.</li>
+        <li>Knead until the dough is smooth and passes the windowpane test (about 15–25 minutes, depending on your mixer).</li>
+        <li>Don’t add extra flour just because the dough is sticky while kneading. If you knead it long enough, it will come together on its own, stickiness in the beginning is normal! (REFERENCE Dough Stickiness section above)</li>
+      </ul>
+
+    </div>
+    
+  </div>
+</div>
+
+<!-- FOOTER -->
+<div class="footer">
+  © 2026 Alicia Company. All Rights Reserved. | Privacy Policy | Terms of Service | Disclaimer
+</div>
+
+<script>
+function closeModal(){
+  document.querySelector('.modal').style.display = 'none';
+}
+</script>
+
+</body>
+</html>
